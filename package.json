@@ -1,7 +1,7 @@
 {
   "name": "qa-playwright-curso",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Nombre: QA Playwright Curso\r - Carné: N/A\r - Versión de Node.js: verificada con `node --version`",
   "main": "index.js",
   "scripts": {
     "test": "playwright test",
@@ -14,7 +14,21 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.61.1",
-    "@types/node": "^26.1.1"
-  }
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.1.1",
+    "install": "^0.13.0",
+    "npx": "^10.2.2",
+    "playwright": "^1.62.1"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doskihuaski1234/aseguramiento-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/doskihuaski1234/aseguramiento-/issues"
+  },
+  "homepage": "https://github.com/doskihuaski1234/aseguramiento-#readme"
 }

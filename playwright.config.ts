@@ -2,37 +2,46 @@ import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
+
   timeout: 30_000,
+
   expect: {
     timeout: 10_000,
   },
-  fullyParallel: true,
+
+  fullyParallel: false,
+
   forbidOnly: !!process.env.CI,
+
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
+
+  workers: 1,
+
   reporter: [
     ['list'],
     ['html', { open: 'always', outputFolder: 'playwright-report' }],
   ],
+
   use: {
-    baseURL: 'https://www.demoblaze.com',
-     headless: false,
-    trace: 'on-first-retry',
-    screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    baseURL: 'https://www.saucedemo.com',
+
+    headless: true,
+
+    slowMo: 500,
+
+    trace: 'on',
+
+    screenshot: 'on',
+
+    video: 'on',
   },
+
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
+      use: {
+        ...devices['Desktop Chrome'],
+      },
     },
   ],
 });
