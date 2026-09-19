@@ -1,6 +1,6 @@
 #ASEGURAMIENTO DE LA CALIDAD DE SOFTWARE 
 
-- Nombre: ASEGURAMIENTO DE LA CALIDAD DE SOFTWARE
+- Nombre: PAOLO A. MARROQUIN DE LA CRUZ
 - Carné: 1790-22-8967
 - Versión de Node.js: verificada con `node --version`
 
